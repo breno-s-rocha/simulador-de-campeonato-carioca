@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script type="text/javascript" src="futebol.js">
+        </script>
+        <title>Bol&atilde;o de Futebol
+        </title>
+    </head>
+    <body onload="javascript: initData();">
+        <form id="fTimes" action="">
+            <table>
+                <tr>
+                    <td valign="middle"
+                        style="width: 150px; font-family: Trebuchet MS; font-size: 12px;"
+                        rowspan="2">
+                        <center>
+                        Times do
+                        <br />
+                        Rio de Janeiro:
+                        <br />
+                        <br />
+                        <input id="txtTimes" type="text" name="txtTimes" style="width: 100px;" />
+                        </center>
+                    </td>
+                    <td valign="middle"
+                        style="width: 150px;" rowspan="2">
+                        <center>
+                            <select name="times"
+                                    size="8">
+                                <option value="Vasco da Gama">Vasco da Gama</option>
+                                <option value="Flamengo">Flamengo</option>
+                                <option value="Fluminense">Fluminense</option>
+                                <option value="Botafogo">Botafogo</option>
+                                <option value="Cabofriense">Cabofriense</option>
+                                <option value="Nova Iguacu">Nova Iguacu</option>
+                                <option value="Madureira">Madureira</option>
+                                <option value="Boavista">Boavista</option>
+								<!--option value="Friburguense">Friburguense</option>
+								<option value="Macae">Macae</option>
+								<option value="Volta Redonda">Volta Redonda</option>
+								<option value="Resende">Resende</option>
+								<option value="Bangu">Bangu</option>
+								<option value="Bonsucesso">Bonsucesso</option>
+								<option value="Duque de Caxias">Duque de Caxias</option>
+								<option value="Audax">Audax</option-->
+                            </select>
+                        </center>
+                    </td>
+                    <td valign="middle">
+                        <center>
+                            <a href="javascript:teamMove(-1);">
+                                <img alt="Up"
+                                     src="up.gif"
+                                     border="0" />
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle">
+                        <center>
+                            <a href="javascript:teamMove(1);">
+                                <img alt="Down"
+                                     src="down.gif"
+                                     border="0" />
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle"
+                        style="width:150px;">
+                        <center>
+                            <input id="Button1"
+                                   type="button"
+                                   value="Incluir Time"
+                                   onclick="javascript:teamInclude();"
+                                   style="width: 100px;" />
+                        </center>
+                    </td>
+                    <td valign="middle"
+                        style="width:150px;">
+                        <center>
+                            <input id="Button2"
+                                   type="button"
+                                   value="Excluir Time"
+                                   onclick="javascript:teamExclude();"
+                                   style="width: 100px;" />
+                        </center>
+                    </td>
+                    <td valign="middle">
+                        <center>&nbsp;
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle"
+                        style="width:150px;">
+                        <center>
+                            <input id="Button3"
+                                   type="button"
+                                   value="Jogar"
+                                   onclick="javascript:teamsPlay();"
+                                   style="width: 100px;" />
+                        </center>
+                    </td>
+                    <td valign="middle"
+                        style="width:150px;">
+                        <center>
+                            <input id="Button4"
+                                   type="button"
+                                   value="Estatísticas"
+                                   onclick="javascript:teamsPrint();"
+                                   style="width: 100px;" />
+                        </center>
+                    </td>
+                    <td valign="middle">
+                        <center>&nbsp;
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle"
+                        style="width:150px;">
+                        <center>
+                            <input id="Button5"
+                                   type="button"
+                                   value="Partidas"
+                                   onclick="javascript:teamsGames();"
+                                   style="width: 100px;" />
+                        </center>
+                    </td>
+                    <td valign="middle"
+                        style="width:150px;">
+                        <center><a href="../index.html">Voltar</a>
+                        </center>
+                    </td>
+                    <td valign="middle">
+                        <center>&nbsp;
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div id="teamGamesDiv"
+             style="position: absolute; left: 500px; top: 0px; background-color: #CCFF33; width: 300px; height: 800px; overflow: auto; font-family: System;">
+        </div>
+        <div id="teamStatsDiv" 
+             style="position: absolute; left: 800px; top: 0px; background-color: #99CCFF; width: 300px; height: 800px; overflow: auto; font-family: System; font-size: 10px;">
+        </div>
+        <div id="teamClassifDiv"
+             style="position: absolute; left: 0px; top: 360px; background-color: #FFCC66; width: 500px; height: 500px; overflow: auto; font-family: 'Trebuchet MS'; font-size: 14px;">
+        </div>
+    </body>
+</html>
